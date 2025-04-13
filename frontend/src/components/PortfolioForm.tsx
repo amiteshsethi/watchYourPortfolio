@@ -23,19 +23,19 @@ const PortfolioForm: React.FC<Props> = ({ onAssetAdded }) => {
       <div>
         <label>Type: </label>
         <select value={type} onChange={e => setType(e.target.value)}>
-          <option value=\"SIP\">SIP</option>
-          <option value=\"Stock\">Stock</option>
+          <option value="SIP">SIP</option>
+          <option value="Stock">Stock</option>
         </select>
       </div>
       <div>
         <label>Name: </label>
-        <input type=\"text\" value={name} onChange={e => setName(e.target.value)} required />
+        <input type="text" value={name} onChange={e => setName(e.target.value)} required />
       </div>
       <div>
         <label>Allocation (%): </label>
-        <input type=\"number\" value={allocation} onChange={e => setAllocation(Number(e.target.value))} required />
+        <input type="number" value={allocation} onChange={e => setAllocation(Number(e.target.value))} required />
       </div>
-      <button type=\"submit\">Add Asset</button>
+      <button type="submit">Add Asset</button>
     </form>
   );
 };

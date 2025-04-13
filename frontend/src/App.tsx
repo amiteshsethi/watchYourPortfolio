@@ -16,10 +16,47 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Portfolio Monitor</h1>
-      <PortfolioForm onAssetAdded={fetchPortfolio} />
-      <PortfolioList assets={portfolio} />
+    <div style={{
+      padding: '2rem',
+      maxWidth: '800px',
+      margin: '0 auto',
+      fontFamily: 'Arial, sans-serif'
+    }}>
+      <h1 style={{
+        color: '#2c3e50',
+        borderBottom: '2px solid #3498db',
+        paddingBottom: '10px',
+        marginBottom: '20px'
+      }}>Portfolio Monitor</h1>
+      
+      <div style={{
+        backgroundColor: '#f8f9fa',
+        borderRadius: '8px',
+        padding: '20px',
+        marginBottom: '20px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+      }}>
+        <h2 style={{ 
+          fontSize: '1.2rem', 
+          marginBottom: '15px',
+          color: '#3498db'
+        }}>Add New Asset</h2>
+        <PortfolioForm onAssetAdded={fetchPortfolio} />
+      </div>
+      
+      <div style={{
+        backgroundColor: '#f8f9fa',
+        borderRadius: '8px',
+        padding: '20px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+      }}>
+        <h2 style={{ 
+          fontSize: '1.2rem', 
+          marginBottom: '15px',
+          color: '#3498db'
+        }}>Your Portfolio</h2>
+        <PortfolioList assets={portfolio} />
+      </div>
     </div>
   );
 };
